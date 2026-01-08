@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYBOOKLET</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#135bec',
+                        paper: {
+                            light: '#ffffff',
+                            dark: '#1c222e',
+                            line: 'rgba(19, 91, 236, 0.1)',
+                            margin: '#ef4444'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+        
+        /* Notebook Paper Patterns */
+        .lined-pattern {
+            background-image: linear-gradient(var(--paper-line-color, rgba(19, 91, 236, 0.1)) 1px, transparent 1px);
+            background-size: 100% 2rem;
+            background-attachment: local;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(var(--paper-line-color, rgba(19, 91, 236, 0.1)) 1px, transparent 1px),
+                linear-gradient(90deg, var(--paper-line-color, rgba(19, 91, 236, 0.1)) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+            background-attachment: local;
+        }
+
+        /* Editor List Styling */
+        [contenteditable] {
+            outline: none;
+        }
+        [contenteditable] ul {
+            list-style-type: disc !important;
+            padding-left: 2rem !important;
+            margin: 1rem 0;
+        }
+        [contenteditable] ol {
+            list-style-type: decimal !important;
+            padding-left: 2rem !important;
+            margin: 1rem 0;
+        }
+        [contenteditable] li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight-node {
+            border-radius: 2px;
+            padding: 0 2px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen">
+    <div id="root"></div>
+</body>
+</html>

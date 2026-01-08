@@ -1,0 +1,7 @@
+{
+  "name": "MYBOOKLET",
+  "description": "A sophisticated digital notebook app with multi-book support, customizable page styles, drawing tools, and rich text editing.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
